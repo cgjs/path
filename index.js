@@ -1,3 +1,15 @@
+/*
+
+  ┌─────────────┐
+  │   Missing   │
+  └─────────────┘
+  toNamespacedPath
+  posix
+  win32
+
+ */
+
+
 const GLib = imports.gi.GLib;
 const File = imports.gi.Gio.File;
 const {PATH_SEPARATOR} = imports.cgjs.constants;
@@ -59,3 +71,5 @@ this.resolve = (...paths) => {
   const resolved = paths.length ? this.join(...paths) : '';
   return resolved || GLib.get_current_dir();
 };
+
+this.sep = PATH_SEPARATOR;
